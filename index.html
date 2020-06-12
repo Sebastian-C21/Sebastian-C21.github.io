@@ -3,8 +3,140 @@
     <head>
         <meta charset="utf-8"> <!--define the character set: "browser
         should know how to interpret the content of the webpage-->
+        <title>Using CSS commands</title>
+        <style>
+            p {
+                color: blueviolet;
+                text-align: left;
+            }
+            #title {
+                color: brown;
+                text-align: center;
+                font-weight: bold;
+                font-style: italic;
+            }
+            .first {
+                color: coral;
+                text-decoration-color: cornflowerblue;
+                font-size: 60px;
+                opacity: .5;
+            }
+            p.big {
+                font-size: 40px;
+                color: chocolate;
+            }
+            article > p {
+                color: darkgreen;
+            }
+            article li {
+                background-color: darkorange;
+            }
+            ul > .color {
+                background-color: darkslateblue;
+            }
+            .colored li {
+                font-size: 30px;
+            }
+            .try {
+                color: rosybrown;
+                background-color: red;
+                font-style: italic;
+            }
+            .tryy {
+                color: slateblue;
+                background-color: tomato;
+            }
+            h1 + p {
+                background-color: teal
+            }
+            p ~ span{
+                background-color: yellowgreen;
+            }
+            h2 {
+                color: yellowgreen;
+                font-size: xx-large;
+            }
+            header li {
+                list-style: none;
+
+            }
+            a:link, a:visited {
+                text-decoration: none;
+                background-color: rgb(0, 128, 11);
+                border: 1px solid blue;
+                color: black;
+                display: block;
+                width: 200px;
+                text-align: center;
+                margin-bottom: 1px;
+            }
+            a:hover {
+                background-color: deeppink;
+                color: gold;
+            }
+            a:active {
+                background-color: chocolate;
+                color: cyan;
+            }
+            header li:nth-child(3) {
+                font-size:  60px;
+            }
+            section div:nth-child(odd) {
+                background-color: gray;
+            }
+            section div:nth-child(4):hover {
+                background-color: gold;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
-
+        <!--First selectors-->
+        <h1 id="title">Using CSS selectors (id selector)</h1>
+        <!--Adyacent selector-->
+        <p>First Element selector</p>
+        <p class="first">First class slector</p>
+        <h2>Subheading (h2) with p style</h2>
+        <!--Combinig CSS selectors-->
+        <p class="big">P element with class="big"</p>
+        <article>
+            <p>P elemen inside (child) of article element</p>
+            <ul class="colored">
+                <li>Firs unordered list element inside article element</li>
+                <li class="color">list item with class child of ul</li>
+                <li>Lis item inside a class="colored" element (ul)</li>
+            </ul>
+        </article>
+        <p class="try">Combining class elements 1</p>
+        <p class="tryy">Combining class elemntes 2</p>
+        <span>Elemento span para selector general p~span</span>
+        <!--Pseudo class selectors-->
+        <h2>Pseudo Class Selectors</h2>
+        <!--Creating a menu with the list-->
+        <!--Hover, mouse on button, active, when user clicks button but
+        hasn't released yet-->
+        <!--a:Link = while link is the way it is, a link, visited, when
+        link is visited-->
+        <!--The order the style are programmed have an effect on the actions
+        performed on the webpage-->
+        <header>
+            <ul>
+                <li><a href="/" target="-blank">Home</a></li>
+                <li><a href="http://www.facebook.com" target="-blank">Facebook</a></li>
+                <li><a href="http://www.google.com" target="-blank">Google</a></li>
+            </ul>
+        </header>
+        <section>
+            <div>DIV 1</div>
+            <div>DIV 2</div>
+            <div>DIV 3</div>
+            <div>DIV 4</div>
+            <div>DIV 5</div>
+            <div>DIV 6</div>
+            <div>DIV 7</div>
+            <div>DIV 8</div>
+            <div>DIV 9</div>
+            <div>DIV 10</div>
+        </section>
     </body>
 </html>
