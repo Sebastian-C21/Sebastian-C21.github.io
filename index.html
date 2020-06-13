@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"> <!--define the character set: "browser
         should know how to interpret the content of the webpage-->
-        <title>Using CSS commands, Style Placement</title>
+        <title>Using CSS commands, Cascade Algorithms</title>
         <link rel="stylesheet" href="style.css">
         <!--Conflict Resolution-->
         <!--Origin, Merge, Inheritance, Specificity-->
@@ -12,11 +12,34 @@
         <!--Origin Precedence:Two declarations that specify diferent 
         properties for the same target (color, font-size). Declarations
         Merge-->
-        
+        <!--Inheritance:Property selected to a parent element, will
+        indicate that child elements will have also that property, 
+        unless Origin Precedence rule kicks in-->
+        <!--Specificity:Most specific selector combination wins,
+        imagine a priority: style="", id, class, # Of Elements, relate
+        that with a score, !important definition overide Specificity -->
+        <style>
+            header.navigation p {
+                color: blue;
+            }
+            p.blurb {
+                color: red;
+            }
+            p {
+                color: greenyellow !important;
+            }
+        </style>
+        <!--Clear !important command to see the magic-->
     </head>
     <body>
         <h1>Mi primera página web</h1>
         <h2>Hola tia gloria</h2>
         <p>Huele rico el almuerzo</textarea></p>
+        <header class="navigation">
+            <p class="blurb">
+                Some example test for the concepts in comentaries of
+                this code
+            </p>
+        </header>
     </body>
 </html>
