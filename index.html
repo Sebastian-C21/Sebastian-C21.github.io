@@ -3,53 +3,138 @@
     <head>
         <meta charset="utf-8"> <!--define the character set: "browser
         should know how to interpret the content of the webpage-->
-        <title>Media Queries</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Consider the width as its device width (Don´t zoom out) and
+        have an initial scale of 1, meaning that the mobile webpage will
+        show the content as we want it to be deplsayed-->
+        <title>Responsive Design</title>
+        <!--Site designed to adapt its layout to the viewing enviroment
+        by using fluid, proportion-based grinds, flexible images, and
+        CSS3 media queries
+        12 columns used = 100%-->
         <link rel="stylesheet" href="style.css">
-        <!--Media Queries implies that CSS code can be desplayed on 
-        different styles with different screen sizes-->
         <style>
             h1 {
                 margin-bottom: 15px;
             }
             p {
-                width: 50px;
-                height: 50px;
                 border: 1px solid black;
-                margin-bottom: 15px;
+                background-color: #A52A2A;
+                width: 90%;
+                height: 150px;
+                margin-right: auto;
+                margin-left: auto;
+                font-family: Helvetica;
+                color: white;
             }
-            div#container {
-                background-color: #00FFFF;
-                position: relative;
-                top: 60px;
+            /*******Simple responsive Framework********/
+            .row {
+                width: 100%;
             }
-            #p1 {
-                background-color: #A52A3A;
-                position: relative;
-                top: 65px;
-                left: 65px;
+            /****Large Screen Devices****/
+            @media (min-width: 1200px) {
+                .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5,
+                .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10,
+                .col-lg-11, .col-lg-12 {
+                    float: left;
+                    border: 1px solid green;
+                }
+                .col-lg-1 {
+                    width: 8.33%;
+                }
+                .col-lg-2 {
+                    width: 16.66%;
+                }
+                .col-lg-3 {
+                    width: 25%;
+                }
+                .col-lg-4 {
+                    width: 33%;
+                }
+                .col-lg-5 {
+                    width: 41.66%;
+                }
+                .col-lg-6 {
+                    width: 50%;
+                }
+                .col-lg-7 {
+                    width: 58.33%;
+                }
+                .col-lg-8 {
+                    width: 66.66%;
+                }
+                .col-lg-9 {
+                    width: 74.99%;
+                }
+                .col-lg-10 {
+                    width: 83.33%;
+                }
+                .col-lg-11 {
+                    width: 91.66%;
+                }
+                .col-lg-12 {
+                    width: 100%;
+                }
             }
-            #p2 {
-                background-color: #DEB887;
-            }
-            #p3 {
-                background-color: #5F9EA0;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-            #p4 {
-                background-color: #FF7F50;
+            /********Medium Devices Only********/
+            @media (min-width: 950px) and (max-width: 1199px) {
+                .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5,
+                .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10,
+                .col-md-11, .col-md-12 {
+                    float: left;
+                    border: 1px solid green;
+                }
+                .col-md-1 {
+                    width: 8.33%;
+                }
+                .col-md-2 {
+                    width: 16.66%;
+                }
+                .col-md-3 {
+                    width: 25%;
+                }
+                .col-md-4 {
+                    width: 33%;
+                }
+                .col-md-5 {
+                    width: 41.66%;
+                }
+                .col-md-6 {
+                    width: 50%;
+                }
+                .col-md-7 {
+                    width: 58.33%;
+                }
+                .col-md-8 {
+                    width: 66.66%;
+                }
+                .col-md-9 {
+                    width: 74.99%;
+                }
+                .col-md-10 {
+                    width: 83.33%;
+                }
+                .col-md-11 {
+                    width: 91.66%;
+                }
+                .col-md-12 {
+                    width: 100%;
+                }
             }
         </style>
     </head>
     <body>
-        <h1>Positioning elements</h1>
+        <h1>Responsive Layput</h1>
 
-        <div id="container">
-            <p id="p1"></p>
-            <p id="p2"></p>
-            <p id="p3"></p>
-            <p id="p4"></p>
+        <div class="row">
+            <div class="col-lg-3 col-md-6"><p>Item 1</p></div>
+            <div class="col-lg-3 col-md-6"><p>Item 2</p></div>
+            <div class="col-lg-3 col-md-6"><p>Item 3</p></div>
+            <div class="col-lg-3 col-md-6"><p>Item 4</p></div>
+            <div class="col-lg-3 col-md-6"><p>Item 5</p></div>
+            <div class="col-lg-3 col-md-6"><p>Item 6</p></div>
+            <div class="col-lg-3 col-md-6"><p>Item 7</p></div>
+            <div class="col-lg-3 col-md-6"><p>Item 8</p></div>
         </div>
     </body>
 </html>
