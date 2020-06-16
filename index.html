@@ -3,89 +3,53 @@
     <head>
         <meta charset="utf-8"> <!--define the character set: "browser
         should know how to interpret the content of the webpage-->
-        <title>Using CSS commands, Floating Items</title>
+        <title>Media Queries</title>
         <link rel="stylesheet" href="style.css">
+        <!--Media Queries implies that CSS code can be desplayed on 
+        different styles with different screen sizes-->
         <style>
-            * {
-                box-sizing: border-box;
-            }
             h1 {
-                text-align: center;
-                background-color: darkgoldenrod;                
-            }
-            h2 {
-                text-align: left;
-            }
-            div {
-                background-color: #00FFFF;
+                margin-bottom: 15px;
             }
             p {
                 width: 50px;
                 height: 50px;
                 border: 1px solid black;
+                margin-bottom: 15px;
+            }
+            div#container {
+                background-color: #00FFFF;
+                position: relative;
+                top: 60px;
             }
             #p1 {
                 background-color: #A52A3A;
-                float: left;
-                margin: 2px;
+                position: relative;
+                top: 65px;
+                left: 65px;
             }
             #p2 {
                 background-color: #DEB887;
-                float: right;
-                margin: 2px;
             }
             #p3 {
                 background-color: #5F9EA0;
-                float: left;
-                margin: 2px;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
             #p4 {
                 background-color: #FF7F50;
-                float: right;
-                margin: 2px;
-            }
-            section {
-                clear: both;
-            }
-            section > div.first {
-                float: left;
-                width: 50%;
-                background-color: inherit;/*
-                border: 1px solid black;*/
-                padding: 10px;
-            }
-            section >div.second {
-                float: left;
-                width: 50%;
-                background-color: inherit;/*
-                border: 1px solid black;*/
-                padding: 10px;
             }
         </style>
     </head>
     <body>
-        <h1 id="heading">The background property</h1>
-        <div id="bg">
+        <h1>Positioning elements</h1>
+
+        <div id="container">
             <p id="p1"></p>
             <p id="p2"></p>
             <p id="p3"></p>
             <p id="p4"></p>
-            <section>
-                Text inside the section for the floating items
-            </section>
         </div>
-        <h2>Subheading 2</h2>
-        <section>
-            <div class="first">
-                This is the first paragraph, it will hell use to give
-                some text field to use with floating text, making them
-                a flexible text, meaning that it will stretch when the 
-                browser stretches
-            </div>
-            <div class="second">
-                This is the second paragraph, it will hace the same use
-                as the first one
-            </div>
-        </section>
     </body>
 </html>
