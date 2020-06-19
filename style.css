@@ -1,7 +1,11 @@
-.row {
-    margin-bottom: 15px;
+body {
+    font-size: 16px;
+    color: #FFF;
+    background-color: #61122F;
+    font-family: 'Oxygen', sans-serif;
 }
-.row > div {
-    border: 2px solid gray;
-    background-color: honeydew;
+#header-nav {
+    background-color: #f6b319;
+    border-radius: 0;
+    border: 0;
 }
