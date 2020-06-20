@@ -17,8 +17,7 @@
              <nav class="navbar navbar-default" id="header-nav" >
                  <div class="container-fluid">
                      <div class="navbar-header">
-
-                         <a href="index.html">
+                         <a href="index.html" class="pull-left visible-md visible-lg">
                              <div id="logo-img" alt="Logo image"></div>
                          </a>
 
@@ -33,16 +32,51 @@
                              </p>
                          </div>
 
-                         <button type="button" class="navbar-toggler collapsed"
-                         data-toggle="collapse" data-target="#collapse-nav"
+                         <button type="button" class="navbar-toggle collapsed"
+                         data-toggle="collapse" data-target="#collapsable-nav"
                          aria-expanded="false">
                              <span class="sr-only">Toggle Navigation</span>
                              <span class="icon-bar"></span>
-                             <span>
-                             </span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
                          </button>
-
                      </div>
+                     <div id="collapsable-nav" class="collapse navbar-collapse">
+                         <!--Boostrap requires to put this inside the menu items-->
+                         <ul id="nav-list" class="nav navbar-nav navbar-right">
+                             <!--First two classes:Indicate that the element would
+                            be used as a component of navigatoin bar or navigation
+                            las class inidcates float: right;-->
+                            <li>
+                                <a href="menu-categories.html">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    <br class="hidden-xs">
+                                    Products
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                    <br class="hidden-xs">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                    <br class="hidden-xs">
+                                    Media
+                                </a>
+                            </li>
+                            <li id="phone" class="hidden-xs">
+                                <a href="tel:">
+                                    <span>phone number</span>
+                                </a>
+                                <div>We deliver</div>
+                            </li>
+                         </ul><!--#nav list-->
+                     </div><!-- .collapse .navbar-collapse-->
                  </div>
              </nav>
         </header>

@@ -15,9 +15,6 @@ body {
     height: 150px;
     margin: 1px 15px 1px 0;
 }
-div.navbar-header > a {
-    float: left;
-}
 .navbar-brand{
     padding-top: 25px;
 }
@@ -39,4 +36,30 @@ div.navbar-brand  p {
 }
 .navbar-brand a:hover, a:focus {
     text-decoration: none;
+}
+#nav-list {
+    margin-top: 10px;
+}
+#nav-list a {
+    color: #951c49;
+    text-align: center;
+}
+#nav-list a:hover {
+    background: #e7e7e7;
+}
+#nav-list a span {
+    font-size: 1.8;
+}
+#phone {
+    margin-top: 5px;
+}
+#phone a {
+    text-align: right;
+    padding-bottom: 0;
+    font-size: 1.8em;
+}
+#phone div {
+    color: #557c3e;
+    text-align: right;
+    padding-right: 15px;
 }
