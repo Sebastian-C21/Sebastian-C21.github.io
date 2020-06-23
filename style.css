@@ -70,10 +70,29 @@ div.navbar-brand  p {
     clear: both;
     margin-top: -30px;
 }
+#menu-tile, #specials-tile, #map-tile {
+    height: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid #3f0c1f;
+    overflow: hidden;
+}
+.container .jumbotron {
+        padding: 0;
+        box-shadow: 0 0 50px #3f0c1f;
+        border: 2px solid #3f0c1f;
+}
 /****************Media Queries***************/
 /*Large Devices Only*/
 @media (min-width: 1200px){
-
+    .container .jumbotron { /*.containeris added so its padding updates*/
+        background: url() no-repeat; /*Add Images for the media queries*/
+        margin-top: 30px;
+        padding: 0;
+        box-shadow: 0 0 50px #3f0c1f;
+        border: 2px solid #3f0c1f;
+    }
 }
 /*Medium Devices Only*/
 @media (min-width: 992px) and (max-width: 1199px){
@@ -84,10 +103,18 @@ div.navbar-brand  p {
         height: 100px;
         margin: 5px 5px 5px 0;
     }
+    .container .jumbotron { /*.containeris added so its padding updates*/
+        background: url() no-repeat;
+        margin-top: 30px;
+        
+    }
 }
 /*Small Devices Onlyv*/
 @media (min-width: 768px) and (max-width: 991px){
-
+    .container .jumbotron { /*.containeris added so its padding updates*/
+        background: url() no-repeat;
+        margin-top: 30px;
+    }
 }
 /*Extra Small Devices Only*/
 @media (max-width: 767px){
@@ -101,5 +128,30 @@ div.navbar-brand  p {
     .navbar-brand p {
         font-size: .6em;
         margin-top: 12px;
+    }
+    #collapsable-nav a { /*Collapsed nav menu glyphicon*/
+        font-size: 1.2em;
+    }
+    #collapsable-nav a span { /*Collapsed nav menu glyphicon*/
+        font-size: 1em;
+        margin-right: 5px;
+    }
+    #call-btn > a {
+        font-size: 1.5em;
+        display: block; /*Center align*/
+        margin: 0 20px;
+        padding: 10px;
+        border: 2px solid #FFF;
+        background-color: #f6b319;
+        color: #951c49;
+    }
+    #xs-deliver {
+        margin-top: 5px;
+        font-size: .7em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+    .container .jumbotron { /*.containeris added so its padding updates*/
+        margin-top: 30px;
     }
 }
