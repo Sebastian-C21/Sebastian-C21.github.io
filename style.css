@@ -207,6 +207,7 @@ div.navbar-brand  p {
         margin-top: 30px;
     }
     /*End Homepage Jumbotron*/
+    /*Starting*/
 }
 /*Extra Small Devices Only*/
 @media (max-width: 767px){
@@ -268,9 +269,26 @@ div.navbar-brand  p {
 }
 /*Extra small devices*/
 @media (max-width: 479px) {
+    /*Header Start*/
+    .navbar-brand h1 {
+        padding-top: 5px;
+        font-size: 6vw;
+    }
+    /*Header End*/
+    /*Home Page Start*/
     #menu-tile, #specials-tile {
         width: 280px;
         margin: 0 auto 15px;
     }
-    /*Homepage for extra small devices*/
+    /*Home Page End*/
+    /*Menu Page Start */
+    .col-xxs-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+        width: 100%;
+    }
+    /*Menu Page End*/
 }
