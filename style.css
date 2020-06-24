@@ -63,6 +63,7 @@ div.navbar-brand  p {
     color: #557c3e;
     text-align: right;
     padding-right: 15px;
+    font-size: 0.8em;
 }
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar{
     border: 1px solid #61122f;
