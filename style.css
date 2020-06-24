@@ -4,6 +4,7 @@ body {
     background-color: #61122F;
     font-family: 'Oxygen', sans-serif;
 }
+/*Starting Header*/
 #header-nav {
     background-color: #f6b319;
     border-radius: 0;
@@ -70,6 +71,9 @@ div.navbar-brand  p {
     clear: both;
     margin-top: -30px;
 }
+/*End of Header*/
+
+/*Starting Homepage*/
 #menu-tile, #specials-tile, #map-tile {
     height: 250px;
     width: 100%;
@@ -106,39 +110,73 @@ div.navbar-brand  p {
     color: #fff;
     opacity: .8;
 }
+/*End of Homepage*/
+/*Starting Footer*/
+.panel-footer {
+    margin-top: 30px;
+    padding-top: 35px;
+    padding-bottom: 0;
+    background-color: #222;
+    border-top: 0;
+}
+.panel-footer  div.row {/*Hours, Address, Testimony*/
+    margin-bottom: 35px;
+}
+#hours, #address {
+    line-height: 2;
+}
+#hours > span, #address >span {
+    font-size: 1.3em;
+}
+#address p {
+    color: #557c3e;
+    font-size: .8em;
+    line-height: 1.8;
+}
+#testimonials {
+    font-style: italic;
+}
+#testimonials p:nth-child(2) {
+    margin-top: 25px;
+}
+/*End of footer*/
 /****************Media Queries***************/
 /*Large Devices Only*/
 @media (min-width: 1200px){
     .container .jumbotron { /*.containeris added so its padding updates*/
-        background: url() no-repeat; /*Add Images for the media queries*/
+        background: url('') no-repeat; /*Add Images for the media queries*/
         /*Pixel Art Image Pending*/
         margin-top: 30px;
         padding: 0;
         box-shadow: 0 0 50px #3f0c1f;
         border: 2px solid #3f0c1f;
     }
+    /*End Homepage Jumbotron*/
 }
 /*Medium Devices Only*/
 @media (min-width: 992px) and (max-width: 1199px){
     /*Reducing Logo*/
     #logo-img {
-        background: url() no-repeat;/*Pixel Art Image Pending*/
+        background: url('') no-repeat;/*Pixel Art Image Pending*/
         width: 100px;
         height: 100px;
         margin: 5px 5px 5px 0;
     }
+    /*End Header*/
     .container .jumbotron { /*.containeris added so its padding updates*/
-        background: url() no-repeat;/*Pixel Art Image Pending*/
+        background: url('') no-repeat;/*Pixel Art Image Pending*/
         margin-top: 30px;
         
     }
+    /*End Homepage Jumbotron*/
 }
 /*Small Devices Onlyv*/
 @media (min-width: 768px) and (max-width: 991px){
     .container .jumbotron { /*.containeris added so its padding updates*/
-        background: url() no-repeat;/*Pixel Art Image Pending*/
+        background: url('') no-repeat;/*Pixel Art Image Pending*/
         margin-top: 30px;
     }
+    /*End Homepage Jumbotron*/
 }
 /*Extra Small Devices Only*/
 @media (max-width: 767px){
@@ -175,6 +213,8 @@ div.navbar-brand  p {
         letter-spacing: .1em;
         text-transform: uppercase;
     }
+    /*End Header*/
+    /*Starting Homepage*/
     .container .jumbotron { /*.containeris added so its padding updates*/
         margin-top: 30px;
     }
@@ -182,6 +222,19 @@ div.navbar-brand  p {
         width: 360px;
         margin: 0 auto 15px;
     }
+    /*End Homepage Jumbotron*/
+    /*Footer*/
+    .panel-footer section {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .panel-footer section:nth-child(3) {/*testimonials*/
+        margin-bottom: 0;
+    }
+    .panel-footer section hr {
+        width: 50%;
+    }
+    /*End Footer*/
 }
 /*Extra small devices*/
 @media (max-width: 479px) {
@@ -189,4 +242,5 @@ div.navbar-brand  p {
         width: 280px;
         margin: 0 auto 15px;
     }
+    /*Homepage for extra small devices*/
 }
