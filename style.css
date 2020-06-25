@@ -169,8 +169,19 @@ div.navbar-brand  p {
     position: absolute;
     right: 0;
     bottom: 0;
-    border: 1px solid #3f0c1f;
     width: 80px;
+    background-color: #557c3e;
+    text-align: center;
+}
+.menu-item-description {
+    padding-right: 30px;
+}
+h3.menu-item-tile {
+    margin: 0 0 10px;
+}
+.menu-item-details {
+    font-size: .9em;
+    font-style: italic;
 }
 /*Single Page end*/
 /*Starting Footer*/
@@ -286,6 +297,14 @@ div.navbar-brand  p {
         margin: 0 auto 15px;
     }
     /*End Homepage Jumbotron*/
+    /*Single Page Start*/
+    .menu-item-photo {
+        margin-right: auto;
+    }
+    .menu-item-tile .menu-item-price {
+        text-align: center;
+    }
+    /*Single Page End*/
     /*Footer*/
     .panel-footer section {
         margin-bottom: 30px;
@@ -299,7 +318,7 @@ div.navbar-brand  p {
     }
     /*End Footer*/
 }
-/*Extra small devices*/
+/*Extra Extra small devices*/
 @media (max-width: 479px) {
     /*Header Start*/
     .navbar-brand h1 {
