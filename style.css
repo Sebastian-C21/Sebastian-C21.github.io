@@ -141,6 +141,38 @@ div.navbar-brand  p {
     margin-bottom: 50px;
 }
 /*End of Menu Page*/
+/*Single Page Start*/
+.menu-item-tile {
+    margin-bottom: 25px;
+}
+.menu-item-tile hr {
+    width: 80%;
+}
+.menu-item-tile .menu-item-price {
+    font-size: 1.1em;
+    text-align: right;
+}
+.menu-item-tile .menu-item-price span {
+    font-size: .6em;
+}
+.menu-item-photo {
+    position: relative;
+    border: 2px solid #3f0c1f;
+    overflow: hidden;
+    padding: 0;
+    margin-right: -10px;
+    margin-left: auto;
+    margin-bottom: 2px;
+    max-width: 250px;
+}
+.menu-item-photo div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #3f0c1f;
+    width: 80px;
+}
+/*Single Page end*/
 /*Starting Footer*/
 .panel-footer {
     margin-top: 30px;
