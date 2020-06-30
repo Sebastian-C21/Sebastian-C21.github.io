@@ -9,6 +9,7 @@
         }
         else {
             global.alert("Ajax is not supported!");
+            return(null);
         }
     }
     //Makes an Ajax GET request to 'requestUrl'
@@ -40,4 +41,4 @@
 
     //Expose utility to the global object
     global.$ajaxUtils = ajaxUtils;
-});
+})(window);
