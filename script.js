@@ -1,25 +1,22 @@
+//Event handling
 document.addEventListener("DOMContentLoaded",
-function (event) {
-    document.querySelector("button")
-        .addEventListener("click", function(){
-            //Call server to get the name
-            $ajaxUtils
-                .sendGetRequest("/5_W/name.json",
-                function (res) {
-                    var message = res.firstName + " " + res.lastName
-                    if (res.likesChineseFood) {
-                        message += " likes Chinese Food";
-                    }
-                    else {
-                        message += " doesn't like Chinese Food";
-                    }
-                    message += " and uses";
-                    message += res.numberOfDisplays;
-                    message += " displays for coding.";
+    function (event) {
 
-                    document.querySelector("#content")
-                        .innerHTML = "<h2>"+message+"</h2>";
-                });
-        });
-}
+        //Unobstrusive event binding
+        document.querySelector("button")
+            .addEventListener("click", function() {
+                var self = this;
+                var name = "";
+
+                //Call server to get the name
+                $ajaxUtils
+                    .sendGetRequest("/5_W/name.txt",
+                        function(request) {
+                            self.name = request.responseText;
+                            
+                            document.querySelector("#content")
+                                .innerHTML = "Hello " + self.name;
+                        });
+            });
+    }
 );
