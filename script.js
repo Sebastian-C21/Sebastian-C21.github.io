@@ -19,6 +19,10 @@ $(function (){ //same as document.addEventListener("DOMContentLoaded, ...")
     var categoriesTitleHTML = "snippets/categories-title-snippet.html";
     var categoryHTML = "snippets/category-snippet.html";
 
+    var menuItemsUrl = "http://davids-restaurant.herokuapp.com/menu_items.json?category=";
+    var menuItemsTitle = "snippets/menu-items-title.html";
+    var menuItemsHTML = "snippets/menu-item.html";
+
     //convinience function for inserting innerHTML for 'select'
     var insertHTML = function (selector, html) {
         var targerElem = document.querySelector(selector);
