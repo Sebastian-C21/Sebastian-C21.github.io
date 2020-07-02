@@ -14,7 +14,8 @@ $(function (){ //same as document.addEventListener("DOMContentLoaded, ...")
     var PixelR = {};
 
     var homeHTML = "snippets/home-snippet.html";
-    var allCategories = "snippets/food-categories.json";
+    
+    var allCategoriesUrl = "http://davids-restaurant.herokuapp.com/categories.json";
     var categoriesTitleHTML = "snippets/categories-title-snippet.html";
     var categoryHTML = "snippets/category-snippet.html";
 
@@ -51,20 +52,26 @@ $(function (){ //same as document.addEventListener("DOMContentLoaded, ...")
     //load the menu categories view
     PixelR.loadMenuCategories = function () {
         showLoading("#main-content");
-        $ajaxUtils.sendGetRequest(allCategories, buildAndShowCategoriesHTML);
+        $ajaxUtils.sendGetRequest(
+            allCategoriesUrl,
+            buildAndShowCategoriesHTML);
     };
 
     //Builds HTML for the categories page based on the data from the server
     function buildAndShowCategoriesHTML (categories) {
         //Load title snippet of categories page
-        $ajaxUtils.sendGetRequest(categoriesTitleHTML, function (categoriesTitleHTML) {
+        $ajaxUtils.sendGetRequest(
+            categoriesTitleHTML,
+            function (categoriesTitleHTML) {
             //Retrieve single category snippet
-            $ajaxUtils.sendGetRequest(categoryHTML, function(categoryHTML) {
-                var categoriesViewHTML = buildCategoriesViewHTML(
-                    categories,
-                    categoriesTitleHTML,
-                    categoryHTML
-                );
+            $ajaxUtils.sendGetRequest(
+                categoryHTML,
+                function(categoryHTML) {
+                var categoriesViewHTML = 
+                    buildCategoriesViewHTML(
+                        categories,
+                        categoriesTitleHTML,
+                        categoryHTML);
                 insertHTML("#main-content", categoriesViewHTML);
             }, false);
         }, false);
@@ -72,19 +79,21 @@ $(function (){ //same as document.addEventListener("DOMContentLoaded, ...")
 
     //Using categories data and snippets html build categories view HTML
     //to be inserted into page
-    function buildCategoriesViewHTML(categories, categoriesTitleHTML, categoryHTML) {
+    function buildCategoriesViewHTML(categories,
+                                    categoriesTitleHTML,
+                                    categoryHTML) {
         var finalHTML = categoriesTitleHTML;
         finalHTML += "<section class='row'>";
 
         //Loop over categories
         for (var i=0; i<categories.length; i++) {
             //Insert category values
-            var HTML = categoryHTML;
+            var html = categoryHTML;
             var name = "" + categories[i].name;
             var short_name = categories[i].short_name;
-            HTML = insertProperty(HTML, "name", name);
-            HTML = insertProperty(HTML, "short_name", short_name);
-            finalHTML += HTML;
+            html = insertProperty(html, "name", name);
+            html = insertProperty(html, "short_name", short_name);
+            finalHTML += html;
         }
         finalHTML += "</section>";
         return finalHTML;
